@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <title>Mail Generator</title>
+    </head>
+    <body>
+        <header></header>
+        <div class="container">
+            <div class="container">
+                <h1>Mail Generater</h1>
+            </div>
+            <div class="container">
+                <form id="id_form" action="">
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label>grade</label>
+                            <input type="text" class="form-control" id="id_grade" value="2">
+                        </div>
+                        <div class="form-group col">
+                            <label>name</label>
+                            <input type="text" class="form-control" id="id_name" value="大阪　太郎">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>date</label>
+                        <input type="date" class="form-control" name="date" id="id_date">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label>start time</label>
+                            <input type="time" class="form-control" name="start-time" value="09:00" id="id_start" step="1800">
+                        </div>
+                        <div class="form-group col">
+                            <label>finish time</label>
+                            <input type="time" class="form-control" name="finish-time" value="12:00" id="id_finish" step="1800">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label>marine warning</label>
+                            <input type="text" class="form-control"  value="なし" id="id_marine">
+                        </div>
+                        <div class="form-group col">
+                            <label>wind advisory</label>
+                            <input type="text" class="form-control"  value="なし" id="id_wind">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>safety level</label>
+                        <input type="number" class="form-control" name="safety-level" value="1" id="id_safety">
+                    </div>
+                    <label>rescue boat phone number</label>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label>Maya</label>
+                            <input type="tel" class="form-control" name="maya-tel" value="090-3141-5926" id="phone_maya">
+                        </div>
+                        <div class="form-group col">
+                            <label>KABUTO</label>
+                            <input type="tel" class="form-control" name="kabuto-tel" value="090-2718-2818" id="phone_kabuto">
+                        </div>
+                    </div>
+                    
+                    <p>boat assignment</p>
+                    <p>470</p>
+                    <div id="member_form"></div>
+                    <p>Snipe</p>
+                    <div id="snipe_form"></div>
+
+                    <div class="form-group pt-1">
+                        <label>KABUTO</label>
+                        <input type="text" class="form-control" placeholder="member" id="kabuto_mem">
+                    </div>
+                    <div class="form-group pt-1">
+                        <label>Maya</label>
+                        <input type="text" class="form-control" placeholder="member" id="maya_mem">
+                    </div>
+                    <div class="form-group pt-1">
+                        <label>land</label>
+                        <input type="text" class="form-control" placeholder="member" id="land_mem">
+                    </div>
+                    <div class="form-group pt-1">
+                        <label>absence</label>
+                        <input type="text" class="form-control" placeholder="member" id="abs_mem">
+                    </div>
+                    <div class="form-group pt-1">
+                        <label>rest</label>
+                        <input type="text" class="form-control" placeholder="member" id="rest_mem">
+                    </div>
+                </form>
+            
+                <button type="button" class="btn btn-primary btn-block" onclick="onButtonClick();">OK</button>
+
+                <div class="my-3 p-2 border" style="width:100%; height:100%;" id="output"></div>
+
+                <button type="button" class="btn btn-secondary" onclick="copyToClipboard();">Copy</button>
+            </div>
+        </div>
+
+        <!-- bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <script type="text/javascript" src="script.js"></script>
+
+        <footer></footer>
+    </body>
+</html>
